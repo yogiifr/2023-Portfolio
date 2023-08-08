@@ -2,6 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+.text-2xl {
+  transition: transform 0.3s, filter 0.3s; /* Apply transition to transform and filter properties */
+}
+
+.animate-up {
+  animation: slideUp 0.5s ease-in-out;
+}
+
+.animate-down {
+  animation: slideDown 0.5s ease-in-out;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+    filter: blur(0);
+  }
+  100% {
+    transform: translateY(-90%);
+    filter: blur(8px);
+    opacity: 0%;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(100%);
+    filter: blur(8px);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -18,10 +54,5 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
