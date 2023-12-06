@@ -73,7 +73,7 @@ export default function Home() {
 
   return (
     <main className={`flex min-h-screen flex-col items-center justify-between p-10 bg-white ${inter.className}`}>
-      <div className="text-[#525252] text-xs">FRONT END DEVELOPER</div>
+      <div className="text-[#525252] text-xs">DATA ENGINEER</div>
       <div className={`text-black text-2xl cursor-pointer transition-transform transform hover:scale-105 animate-${animationDirection}`} onClick={handleClick} onTransitionEnd={() => setAnimationDirection(null)}>
         {texts[currentIndex]}
         {renderImageSection()}
